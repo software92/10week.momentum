@@ -6,7 +6,7 @@ using html, css and javascript
 
 - [x] greeting
 - [x] clock
-- [ ] quotes
+- [x] quotes
 - [ ] background
 - [ ] todo
 - [ ] weather
