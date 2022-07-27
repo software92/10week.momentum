@@ -5,7 +5,7 @@ using html, css and javascript
 ## To Do
 
 - [x] greeting
-- [ ] clock
+- [x] clock
 - [ ] quotes
 - [ ] background
 - [ ] todo
