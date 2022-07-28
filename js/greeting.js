@@ -7,10 +7,26 @@ const handleSubmit = (e) => {
 
   const username = greetingInput.value;
 
-  greeting.innerHTML = username;
-
+  localStorage.setItem('user', username);
   greetingForm.classList.add('hidden');
+
+  paintUser(username);
+};
+
+const init = () => {
+  const localUser = localStorage.getItem('user');
+
+  if (localUser) {
+    paintUser(localUser);
+  } else {
+    greetingForm.classList.remove('hidden');
+    greetingForm.addEventListener('submit', handleSubmit);
+  }
+};
+
+const paintUser = (username) => {
+  greeting.innerHTML = username;
   greeting.classList.remove('hidden');
 };
 
-greetingForm.addEventListener('submit', handleSubmit);
+init();
