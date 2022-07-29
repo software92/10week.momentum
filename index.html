@@ -10,10 +10,21 @@
   <body>
     <h1 class="clock"></h1>
     <form class="greeting-form hidden">
-      <input type="text" name="name" placeholder="Write your name" />
+      <input required type="text" name="name" placeholder="Write your name" />
       <input type="submit" value="Login" />
     </form>
     <h1 class="greeting hidden"></h1>
+
+    <form class="toDo-form">
+      <input
+        required
+        type="text"
+        class="toDo-input"
+        placeholder="Write your to do"
+      />
+      <input type="submit" value="Do" class="toDo-submit" />
+    </form>
+    <ul class="toDo-list"></ul>
 
     <h3 class="quote"></h3>
     <h4 class="movie"></h4>
@@ -22,5 +33,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/toDo.js"></script>
   </body>
 </html>
