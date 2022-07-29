@@ -28,7 +28,17 @@ const init = () => {
 };
 
 const paintUser = (username) => {
+  const btn = document.createElement('button');
+
+  const handleLogout = (e) => {
+    localStorage.removeItem(USER_KEY);
+    location.reload();
+  };
+
+  btn.addEventListener('click', handleLogout);
+  btn.innerHTML = '🚪';
   greeting.innerHTML = username;
+  greeting.appendChild(btn);
   greeting.classList.remove(HIDDEN_CLASS);
 };
 
