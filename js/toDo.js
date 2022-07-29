@@ -2,6 +2,7 @@ const toDoForm = document.querySelector('.toDo-form');
 const toDoInput = toDoForm.querySelector('input');
 const toDoList = document.querySelector('.toDo-list');
 
+const TODOS_KEY = 'toDos';
 let toDoArr = [];
 
 const handleToDoSubmit = (e) => {
@@ -48,11 +49,11 @@ const paintToDo = (toDoObj) => {
 
 const saveToDo = () => {
   const toStringToDos = JSON.stringify(toDoArr);
-  localStorage.setItem('toDos', toStringToDos);
+  localStorage.setItem(TODOS_KEY, toStringToDos);
 };
 
 const loadToDos = () => {
-  const toDos = localStorage.getItem('toDos');
+  const toDos = localStorage.getItem(TODOS_KEY);
   const parsedToDos = JSON.parse(toDos);
 
   if (parsedToDos) {
