@@ -30,8 +30,8 @@ To do
 ### css
 
 - [x] greeting
-- [ ] clock
+- [x] clock
+- [x] weather
+- [x] toDo
 - [ ] quotes
 - [ ] background
-- [ ] toDo
-- [ ] weather

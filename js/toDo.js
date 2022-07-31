@@ -42,7 +42,6 @@ const handleDoneBtn = (e) => {
 
   const check = e.target.parentNode.firstChild.className;
   const tempArr = toDoArr.filter((item) => item.content !== selectToDo);
-  console.log('11', check);
   if (!check) {
     tempArr.unshift({
       id: Date.now(),

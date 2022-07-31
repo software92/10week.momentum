@@ -1,0 +1,39 @@
+.toDo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.toDo-form input[type='text'] {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.toDo-form input[type='submit'] {
+  font-size: 15px;
+  width: 45px;
+  height: 25px;
+}
+
+.toDo-list {
+  width: 500px;
+  padding: 10px 15px;
+}
+
+.toDo-list li {
+  width: 100%;
+  border-bottom: 1px solid black;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toDo-list li > span {
+  width: 70%;
+  padding: 3px 10px;
+}
+.toDo-list li button {
+  width: 10%;
+}
