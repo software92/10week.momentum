@@ -17,6 +17,6 @@ navigator.geolocation.getCurrentPosition((position) => {
       const state = data.weather[0].main;
 
       weatherLocation.innerHTML = location;
-      weatherState.innerHTML = `${temp} ${state}`;
+      weatherState.innerHTML = `${state} ${temp}°C`;
     });
 });

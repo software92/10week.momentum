@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 5px;
+}
+
+.clock {
+  font-size: 22px;
+}
