@@ -26,7 +26,7 @@ const paintUser = (username) => {
   const btn = document.createElement('button');
 
   btn.addEventListener('click', handleLogout);
-  btn.innerHTML = '🚪';
+  btn.innerHTML = 'Logout';
   greeting.innerHTML = username;
   greeting.appendChild(btn);
   greeting.classList.remove(HIDDEN_CLASS);

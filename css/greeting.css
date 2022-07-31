@@ -1,0 +1,59 @@
+.guest--login {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-form {
+  display: flex;
+  flex-direction: column;
+}
+.greeting-form input[type='text'] {
+  margin-bottom: 10px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+.greeting-form input[type='text']:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.greeting-form input[type='submit'] {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 100px;
+  height: 35px;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+}
+.greeting button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-top: 15px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0px 10px;
+  padding-bottom: 4px;
+}

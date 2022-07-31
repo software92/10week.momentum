@@ -25,4 +25,13 @@ To do
 
 - [ ] 작성된 할 일 항목 수정
 - [x] 진행중 <-> 완료한 할 일 항목 순서 재배열
-- [ ] 기존에 저장된 username과 다른 사용자 로그인 시 기존 할 일 목록 초기화 -> LocalStorage 초기화
+- [x] 기존에 저장된 username과 다른 사용자 로그인 시 기존 할 일 목록 초기화 -> LocalStorage 초기화
+
+### css
+
+- [x] greeting
+- [ ] clock
+- [ ] quotes
+- [ ] background
+- [ ] toDo
+- [ ] weather
