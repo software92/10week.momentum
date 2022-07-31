@@ -17,13 +17,13 @@ const handleSubmit = (e) => {
   paintUser(username);
 };
 
+const handleLogout = (e) => {
+  localStorage.clear();
+  location.reload();
+};
+
 const paintUser = (username) => {
   const btn = document.createElement('button');
-
-  const handleLogout = (e) => {
-    localStorage.removeItem(USER_KEY);
-    location.reload();
-  };
 
   btn.addEventListener('click', handleLogout);
   btn.innerHTML = '🚪';
