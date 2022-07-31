@@ -2,6 +2,8 @@
 @import 'greeting.css';
 @import 'bar.css';
 @import 'toDo.css';
+@import 'background.css';
+@import 'quote.css';
 
 * {
   box-sizing: border-box;

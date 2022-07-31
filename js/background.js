@@ -1,7 +1,7 @@
 const images = [
-  'https://cdn.pixabay.com/photo/2017/06/14/08/20/map-of-the-world-2401458__340.jpg',
-  'https://cdn.pixabay.com/photo/2017/06/07/10/47/elephant-2380009__340.jpg',
-  'https://cdn.pixabay.com/photo/2017/03/05/21/43/planet-2120004__340.jpg',
+  'https://cdn.pixabay.com/photo/2015/09/13/05/58/lighthouse-937738_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594__340.jpg',
+  'https://cdn.pixabay.com/photo/2016/02/14/09/45/diamond-1199183_960_720.jpg',
 ];
 
 const body = document.querySelector('body');

@@ -1,0 +1,16 @@
+.quote {
+  position: absolute;
+  width: 700px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  bottom: 120px;
+}
+.movie {
+  position: absolute;
+  width: 700px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  bottom: 50px;
+}

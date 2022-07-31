@@ -23,9 +23,10 @@ Login
 
 To do
 
-- [ ] 작성된 할 일 항목 수정
 - [x] 진행중 <-> 완료한 할 일 항목 순서 재배열
 - [x] 기존에 저장된 username과 다른 사용자 로그인 시 기존 할 일 목록 초기화 -> LocalStorage 초기화
+- [ ] 작성된 할 일 항목 수정
+- [ ] 할 일 text가 길어지면 다른 영역을 차지하지 않고, span 내부의 높이를 조절
 
 ### css
 
@@ -33,5 +34,5 @@ To do
 - [x] clock
 - [x] weather
 - [x] toDo
-- [ ] quotes
-- [ ] background
+- [x] quotes
+- [x] background
