@@ -4,6 +4,7 @@ const greeting = document.querySelector('.greeting');
 
 const USER_KEY = 'user';
 const HIDDEN_CLASS = 'hidden';
+const GUEST_CLASS = 'guest--login';
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -14,17 +15,6 @@ const handleSubmit = (e) => {
   greetingForm.classList.add(HIDDEN_CLASS);
 
   paintUser(username);
-};
-
-const init = () => {
-  const localUser = localStorage.getItem(USER_KEY);
-
-  if (localUser) {
-    paintUser(localUser);
-  } else {
-    greetingForm.classList.remove(HIDDEN_CLASS);
-    greetingForm.addEventListener('submit', handleSubmit);
-  }
 };
 
 const paintUser = (username) => {
@@ -40,6 +30,19 @@ const paintUser = (username) => {
   greeting.innerHTML = username;
   greeting.appendChild(btn);
   greeting.classList.remove(HIDDEN_CLASS);
+  greetingForm.classList.add(HIDDEN_CLASS);
+  greetingForm.classList.remove(GUEST_CLASS);
+};
+
+const init = () => {
+  const localUser = localStorage.getItem(USER_KEY);
+
+  if (localUser) {
+    paintUser(localUser);
+  } else {
+    greetingForm.classList.remove(HIDDEN_CLASS);
+    greetingForm.addEventListener('submit', handleSubmit);
+  }
 };
 
 init();
