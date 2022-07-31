@@ -14,6 +14,7 @@ const handleToDoSubmit = (e) => {
   const toDoObj = {
     id: Date.now(),
     content: toDo,
+    isDone: false,
   };
 
   toDoArr.push(toDoObj);
@@ -21,29 +22,86 @@ const handleToDoSubmit = (e) => {
   paintToDo(toDoObj);
 };
 
+const handleRemoveBtn = (e) => {
+  const li = e.target.parentNode;
+  const liId = parseInt(e.target.parentNode.id);
+  li.remove();
+
+  const newToDoArr = toDoArr.filter((toDo) => toDo.id !== liId);
+  toDoArr = newToDoArr;
+
+  saveToDo();
+};
+
+const handleUpdateBtn = () => {
+  console.log('To be updated');
+};
+const handleDoneBtn = (e) => {
+  const items = toDoList.querySelectorAll('li');
+  const selectToDo = e.target.parentNode.firstChild.innerHTML;
+
+  const check = e.target.parentNode.firstChild.className;
+  const tempArr = toDoArr.filter((item) => item.content !== selectToDo);
+  console.log('11', check);
+  if (!check) {
+    tempArr.unshift({
+      id: Date.now(),
+      content: selectToDo,
+      isDone: true,
+    });
+
+    toDoArr = tempArr;
+
+    items.forEach((item) => item.remove());
+    saveToDo();
+    toDoArr.forEach((toDoObj) => paintToDo(toDoObj));
+  } else {
+    tempArr.push({
+      id: Date.now(),
+      content: selectToDo,
+      isDone: false,
+    });
+
+    toDoArr = tempArr;
+
+    items.forEach((item) => item.remove());
+    saveToDo();
+    toDoArr.forEach((toDoObj) => paintToDo(toDoObj));
+  }
+};
+
 const paintToDo = (toDoObj) => {
   const li = document.createElement('li');
   const span = document.createElement('span');
-  const btn = document.createElement('button');
+  const removeBtn = document.createElement('button');
+  const updateBtn = document.createElement('button');
+  const doneBtn = document.createElement('button');
+  const toDoBtn = document.createElement('button');
 
   li.id = toDoObj.id;
   span.innerHTML = toDoObj.content;
-  btn.innerHTML = '❌';
+  removeBtn.innerHTML = '❌';
+  updateBtn.innerHTML = '🔨';
+  doneBtn.innerHTML = '✅';
+  toDoBtn.innerHTML = '🔴';
 
-  const handleRemoveBtn = (e) => {
-    const li = e.target.parentNode;
-    const liId = parseInt(e.target.parentNode.id);
-    li.remove();
+  removeBtn.addEventListener('click', handleRemoveBtn);
+  updateBtn.addEventListener('click', handleUpdateBtn);
+  doneBtn.addEventListener('click', handleDoneBtn);
+  toDoBtn.addEventListener('click', handleDoneBtn);
 
-    const newToDoArr = toDoArr.filter((toDo) => toDo.id !== liId);
-    toDoArr = newToDoArr;
-
-    saveToDo();
-  };
-
-  btn.addEventListener('click', handleRemoveBtn);
   li.appendChild(span);
-  li.appendChild(btn);
+  li.appendChild(updateBtn);
+
+  if (toDoObj.isDone) {
+    span.classList.add('done');
+    li.appendChild(toDoBtn);
+  } else {
+    span.classList.remove('done');
+    li.appendChild(doneBtn);
+  }
+  li.appendChild(removeBtn);
+
   toDoList.appendChild(li);
 };
 
