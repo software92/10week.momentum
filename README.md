@@ -2,7 +2,7 @@
 
 Using html, css and javascript
 
-[Link](https://software92.github.io/10week.momentum/, 'To Do App')
+[Link](https://software92.github.io/10week.momentum/ 'To Do App')
 
 ## To Do
 
